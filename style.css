@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+
+:root {
+  --color-primary: #184269;
+  --color-secondary: #f4f4f4;
+}
+
+body {
+  /* background: var(--color-secondary, grey); */
+
+  font-family: "Noto Sans", sans-serif;
+  background-color: rgb(243, 242, 235);
+}
+
+/* .wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: center;
+
+  margin: 2rem auto;
+
+  width: 100%;
+  max-width: 1500px;
+} */
+
+.title,
+.subtitle {
+  margin: 0 auto;
+  width: 100%;
+  color: var(--color-primary, black);
+  text-align: center;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  border-bottom: medium solid #184269;
+}
+
+/* .spacer {
+  display: block;
+
+  margin: 2rem auto;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: var(--color-primary, black);
+  border: 0;
+} */
+
+/* iframe {
+  width: 100%;
+  border: 0;
+} */
+
+.card__container {
+  display: flex;
+  margin-top: 20px;
+}
+
+.card__left,
+.card__right {
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.zoom:hover {
+  transform: scale(1.01);
+  transition-delay: 0.2s;
+}
+.card__image,
+.card__content {
+  background-color: rgb(250, 249, 249);
+  display: block;
+  height: 240px;
+  width: 320px;
+}
+
+img {
+  display: block;
+  height: 240px;
+  width: 320px;
+  z-index: -1;
+}
+
+.card__text {
+  font-size: 0.8rem;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #184269;
+}
+
+.card__date {
+  position: absolute;
+  background-color: white;
+  color: #184269;
+  margin-top: 10px;
+  margin-left: 200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-size: smaller;
+}
+
+.card__image {
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  background-color: #184269;
+  height: 28px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: bolder;
+  padding-right: 20px;
+  padding-left: 25px;
+  display: flex;
+}
+
+button:hover {
+  background-color: #3087d8;
+}
+
+.card__button {
+  display: flex;
+}
+
+.chevron::before {
+  position: relative;
+  top: -6px;
+  bottom: -5px;
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 22px;
+  border-right: 0.7em solid rgb(252, 251, 251);
+  border-top: 0.7em solid rgb(255, 247, 247);
+  transform: rotate(45deg);
+  margin-right: 0.5em;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .card__container {
+    flex-direction: column;
+  }
+
+  .card__left,
+  .card__right {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+}
+
+/* 600-768 tablets */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .card__container {
+    flex-direction: row;
+  }
+
+  .card__left,
+  .card__right {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .card__container {
+    flex-direction: column;
+    margin-left: 10%;
+  }
+
+  .card__left,
+  .card__right {
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .card__container {
+    flex-direction: row;
+    margin-left: 13%;
+  }
+
+  .card__left,
+  .card__right {
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+}
+
+/* your styles here */
